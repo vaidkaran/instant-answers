@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :consultants, controllers: { sessions: "consultants/sessions" }
+  devise_for :customers, controllers: { sessions: "customers/sessions" }
+
   get 'welcome/index'
 
   # You can have the root of your site routed with "root"
